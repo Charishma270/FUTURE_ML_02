@@ -1,0 +1,155 @@
+{
+  "Logistic Regression": {
+    "accuracy": 0.20543093270365997,
+    "precision_macro": 0.20603628227210818,
+    "recall_macro": 0.20593428954010623,
+    "f1_macro": 0.20535100667536774,
+    "classification_report": {
+      "Billing inquiry": {
+        "precision": 0.1912568306010929,
+        "recall": 0.21406727828746178,
+        "f1-score": 0.20202020202020202,
+        "support": 327.0
+      },
+      "Cancellation request": {
+        "precision": 0.19469026548672566,
+        "recall": 0.19469026548672566,
+        "f1-score": 0.19469026548672566,
+        "support": 339.0
+      },
+      "Product inquiry": {
+        "precision": 0.21293800539083557,
+        "recall": 0.24085365853658536,
+        "f1-score": 0.22603719599427755,
+        "support": 328.0
+      },
+      "Refund request": {
+        "precision": 0.19873817034700317,
+        "recall": 0.1794871794871795,
+        "f1-score": 0.18862275449101795,
+        "support": 351.0
+      },
+      "Technical issue": {
+        "precision": 0.23255813953488372,
+        "recall": 0.20057306590257878,
+        "f1-score": 0.2153846153846154,
+        "support": 349.0
+      },
+      "accuracy": 0.20543093270365997,
+      "macro avg": {
+        "precision": 0.20603628227210818,
+        "recall": 0.20593428954010623,
+        "f1-score": 0.20535100667536774,
+        "support": 1694.0
+      },
+      "weighted avg": {
+        "precision": 0.20620102589387487,
+        "recall": 0.20543093270365997,
+        "f1-score": 0.20518100586913054,
+        "support": 1694.0
+      }
+    }
+  },
+  "LinearSVC": {
+    "accuracy": 0.21487603305785125,
+    "precision_macro": 0.21533977184648667,
+    "recall_macro": 0.214799613756211,
+    "f1_macro": 0.2148399284250012,
+    "classification_report": {
+      "Billing inquiry": {
+        "precision": 0.2132564841498559,
+        "recall": 0.22629969418960244,
+        "f1-score": 0.2195845697329377,
+        "support": 327.0
+      },
+      "Cancellation request": {
+        "precision": 0.2011173184357542,
+        "recall": 0.21238938053097345,
+        "f1-score": 0.2065997130559541,
+        "support": 339.0
+      },
+      "Product inquiry": {
+        "precision": 0.21103896103896103,
+        "recall": 0.19817073170731708,
+        "f1-score": 0.20440251572327045,
+        "support": 328.0
+      },
+      "Refund request": {
+        "precision": 0.21153846153846154,
+        "recall": 0.21937321937321938,
+        "f1-score": 0.2153846153846154,
+        "support": 351.0
+      },
+      "Technical issue": {
+        "precision": 0.23974763406940064,
+        "recall": 0.2177650429799427,
+        "f1-score": 0.22822822822822822,
+        "support": 349.0
+      },
+      "accuracy": 0.21487603305785125,
+      "macro avg": {
+        "precision": 0.21533977184648667,
+        "recall": 0.214799613756211,
+        "f1-score": 0.2148399284250012,
+        "support": 1694.0
+      },
+      "weighted avg": {
+        "precision": 0.21549961320999034,
+        "recall": 0.21487603305785125,
+        "f1-score": 0.2149569857364365,
+        "support": 1694.0
+      }
+    }
+  },
+  "Multinomial Naive Bayes": {
+    "accuracy": 0.19952774498229045,
+    "precision_macro": 0.19732785225938096,
+    "recall_macro": 0.1976989237570076,
+    "f1_macro": 0.1936099786594137,
+    "classification_report": {
+      "Billing inquiry": {
+        "precision": 0.18840579710144928,
+        "recall": 0.11926605504587157,
+        "f1-score": 0.14606741573033707,
+        "support": 327.0
+      },
+      "Cancellation request": {
+        "precision": 0.20064724919093851,
+        "recall": 0.18289085545722714,
+        "f1-score": 0.19135802469135801,
+        "support": 339.0
+      },
+      "Product inquiry": {
+        "precision": 0.1867704280155642,
+        "recall": 0.14634146341463414,
+        "f1-score": 0.1641025641025641,
+        "support": 328.0
+      },
+      "Refund request": {
+        "precision": 0.19957983193277312,
+        "recall": 0.2706552706552707,
+        "f1-score": 0.22974607013301088,
+        "support": 351.0
+      },
+      "Technical issue": {
+        "precision": 0.21123595505617979,
+        "recall": 0.2693409742120344,
+        "f1-score": 0.2367758186397985,
+        "support": 349.0
+      },
+      "accuracy": 0.19952774498229045,
+      "macro avg": {
+        "precision": 0.19732785225938096,
+        "recall": 0.1976989237570076,
+        "f1-score": 0.1936099786594137,
+        "support": 1694.0
+      },
+      "weighted avg": {
+        "precision": 0.19755766401417785,
+        "recall": 0.19952774498229045,
+        "f1-score": 0.19464916627025272,
+        "support": 1694.0
+      }
+    }
+  }
+}
