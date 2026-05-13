@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import re
-import string
 from functools import lru_cache
 
 import nltk
@@ -99,8 +98,8 @@ def clean_text(text: object) -> str:
     text = str(text).lower()
     text = text.replace("{product_purchased}", "product")
     text = re.sub(r"http\S+|www\S+", " ", text)
-    text = text.translate(str.maketrans("", "", string.punctuation))
-    text = re.sub(r"[^a-z\s]", " ", text)
+    text = re.sub(r"[^\w\s]", " ", text, flags=re.UNICODE)
+    text = re.sub(r"[\d_]+", " ", text)
     text = re.sub(r"\s+", " ", text).strip()
 
     if _wordnet_available():

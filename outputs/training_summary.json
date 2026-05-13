@@ -1,7 +1,7 @@
 {
   "category_best_model": "LinearSVC",
   "priority_best_model": "LinearSVC",
-  "category_macro_f1": 0.2148399284250012,
-  "priority_macro_f1": 0.2527774764527237,
-  "processed_rows": 8469
+  "category_macro_f1": 0.9737519834201086,
+  "priority_macro_f1": 0.9607312832470875,
+  "processed_rows": 13178
 }

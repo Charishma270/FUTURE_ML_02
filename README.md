@@ -23,13 +23,13 @@ Support teams receive large volumes of unstructured tickets. Manual triage can d
 
 ## Dataset
 
-Kaggle dataset: Customer Support Ticket Dataset  
-https://www.kaggle.com/datasets/suraj520/customer-support-ticket-dataset
+Kaggle dataset: Customer IT Support - Ticket Dataset  
+https://www.kaggle.com/datasets/tobiasbueck/multilingual-customer-support-tickets
 
 Expected local file:
 
 ```text
-data/raw/customer_support_tickets.csv
+data/raw/dataset-tickets-german_normalized_50_5_2.csv
 ```
 
 Raw and processed data files are ignored by Git. The folder structure is tracked with `.gitkeep` files.
@@ -182,14 +182,16 @@ The training script selects the best model by macro F1-score and saves it.
 Current local training run:
 
 ```text
-Rows processed: 8469
+Rows processed: 13178
 Best category model: LinearSVC
-Category macro F1: 0.2148
+Category accuracy: 0.9738
+Category macro F1: 0.9738
 Best priority model: LinearSVC
-Priority macro F1: 0.2528
+Priority accuracy: 0.9636
+Priority macro F1: 0.9607
 ```
 
-These scores are intentionally reported with macro F1 because the dataset is operationally noisy and class balance matters. The project is designed to show a complete pipeline and a realistic improvement path, not to hide weak classes behind accuracy.
+These scores are intentionally reported with both accuracy and macro F1 because class balance matters in support operations. The stronger results come from using a cleaner ticket dataset with better text-label alignment.
 
 ## Results And Screenshots
 

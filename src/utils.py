@@ -30,12 +30,23 @@ DATA_PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
 MODELS_DIR = PROJECT_ROOT / "models"
 OUTPUTS_DIR = PROJECT_ROOT / "outputs"
 
-RAW_DATA_FILE = DATA_RAW_DIR / "customer_support_tickets.csv"
+DATASET_CANDIDATES = [
+    DATA_RAW_DIR / "dataset-tickets-german_normalized_50_5_2.csv",
+    DATA_RAW_DIR / "dataset-tickets-german_normalized.csv",
+    DATA_RAW_DIR / "aa_dataset-tickets-multi-lang-5-2-50-version.csv",
+    DATA_RAW_DIR / "dataset-tickets-multi-lang-4-20k.csv",
+    DATA_RAW_DIR / "dataset-tickets-multi-lang3-4k.csv",
+    DATA_RAW_DIR / "customer_support_tickets.csv",
+]
+RAW_DATA_FILE = DATASET_CANDIDATES[0]
 PROCESSED_DATA_FILE = DATA_PROCESSED_DIR / "processed_tickets.csv"
 
-TEXT_COLUMNS = ["Ticket Subject", "Ticket Description"]
-CATEGORY_COLUMN = "Ticket Type"
-PRIORITY_COLUMN = "Ticket Priority"
+TEXT_COLUMN_OPTIONS = [
+    ("subject", "body"),
+    ("Ticket Subject", "Ticket Description"),
+]
+CATEGORY_COLUMN_OPTIONS = ["queue", "Ticket Type", "type"]
+PRIORITY_COLUMN_OPTIONS = ["priority", "Ticket Priority"]
 
 
 def ensure_project_dirs() -> None:
@@ -48,26 +59,37 @@ def load_raw_data(path: Path | str = RAW_DATA_FILE) -> pd.DataFrame:
     """Load the Kaggle customer support ticket dataset."""
     path = Path(path)
     if not path.exists():
-        raise FileNotFoundError(
-            f"Dataset not found at {path}. Download it from Kaggle and place the CSV in data/raw/."
-        )
+        for candidate in DATASET_CANDIDATES:
+            if candidate.exists():
+                path = candidate
+                break
+        else:
+            raise FileNotFoundError(
+                "No supported dataset found in data/raw/. Download a ticket dataset CSV and place it there."
+            )
     return pd.read_csv(path)
 
 
 def prepare_ticket_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """Create the modeling columns used by the project."""
-    missing = [col for col in [*TEXT_COLUMNS, CATEGORY_COLUMN, PRIORITY_COLUMN] if col not in df.columns]
-    if missing:
-        raise ValueError(f"Missing required columns: {missing}")
+    text_columns = next((cols for cols in TEXT_COLUMN_OPTIONS if all(col in df.columns for col in cols)), None)
+    category_column = next((col for col in CATEGORY_COLUMN_OPTIONS if col in df.columns), None)
+    priority_column = next((col for col in PRIORITY_COLUMN_OPTIONS if col in df.columns), None)
+
+    if text_columns is None or category_column is None or priority_column is None:
+        raise ValueError(
+            "Dataset must include text columns plus category and priority labels. "
+            f"Available columns: {list(df.columns)}"
+        )
 
     prepared = df.copy()
     prepared["ticket_text"] = (
-        prepared["Ticket Subject"].fillna("").astype(str)
+        prepared[text_columns[0]].fillna("").astype(str)
         + " "
-        + prepared["Ticket Description"].fillna("").astype(str)
+        + prepared[text_columns[1]].fillna("").astype(str)
     )
-    prepared["category"] = prepared[CATEGORY_COLUMN].fillna("Unknown").astype(str)
-    prepared["priority"] = prepared[PRIORITY_COLUMN].fillna("Unknown").astype(str)
+    prepared["category"] = prepared[category_column].fillna("Unknown").astype(str)
+    prepared["priority"] = prepared[priority_column].fillna("Unknown").astype(str)
     prepared["ticket_length"] = prepared["ticket_text"].str.split().str.len()
     return prepared
 

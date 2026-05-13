@@ -1,154 +1,820 @@
 {
   "Logistic Regression": {
-    "accuracy": 0.20543093270365997,
-    "precision_macro": 0.20603628227210818,
-    "recall_macro": 0.20593428954010623,
-    "f1_macro": 0.20535100667536774,
+    "accuracy": 0.8861911987860395,
+    "precision_macro": 0.8883717554046675,
+    "recall_macro": 0.8861827174931272,
+    "f1_macro": 0.8849434082124762,
     "classification_report": {
-      "Billing inquiry": {
-        "precision": 0.1912568306010929,
-        "recall": 0.21406727828746178,
-        "f1-score": 0.20202020202020202,
-        "support": 327.0
+      "Arts & Entertainment/Movies": {
+        "precision": 0.975,
+        "recall": 0.75,
+        "f1-score": 0.8478260869565217,
+        "support": 52.0
       },
-      "Cancellation request": {
-        "precision": 0.19469026548672566,
-        "recall": 0.19469026548672566,
-        "f1-score": 0.19469026548672566,
-        "support": 339.0
+      "Arts & Entertainment/Music": {
+        "precision": 0.8709677419354839,
+        "recall": 0.9,
+        "f1-score": 0.8852459016393442,
+        "support": 60.0
       },
-      "Product inquiry": {
-        "precision": 0.21293800539083557,
-        "recall": 0.24085365853658536,
-        "f1-score": 0.22603719599427755,
-        "support": 328.0
+      "Autos & Vehicles/Maintenance": {
+        "precision": 0.8333333333333334,
+        "recall": 0.847457627118644,
+        "f1-score": 0.8403361344537815,
+        "support": 59.0
       },
-      "Refund request": {
-        "precision": 0.19873817034700317,
-        "recall": 0.1794871794871795,
-        "f1-score": 0.18862275449101795,
-        "support": 351.0
+      "Autos & Vehicles/Sales": {
+        "precision": 0.859375,
+        "recall": 0.7534246575342466,
+        "f1-score": 0.8029197080291971,
+        "support": 73.0
       },
-      "Technical issue": {
-        "precision": 0.23255813953488372,
-        "recall": 0.20057306590257878,
-        "f1-score": 0.2153846153846154,
-        "support": 349.0
+      "Beauty & Fitness/Cosmetics": {
+        "precision": 0.8793103448275862,
+        "recall": 0.85,
+        "f1-score": 0.864406779661017,
+        "support": 60.0
       },
-      "accuracy": 0.20543093270365997,
+      "Beauty & Fitness/Fitness Training": {
+        "precision": 0.9107142857142857,
+        "recall": 0.8793103448275862,
+        "f1-score": 0.8947368421052632,
+        "support": 58.0
+      },
+      "Books & Literature/Fiction": {
+        "precision": 0.9772727272727273,
+        "recall": 0.7413793103448276,
+        "f1-score": 0.8431372549019608,
+        "support": 58.0
+      },
+      "Books & Literature/Non-Fiction": {
+        "precision": 0.8412698412698413,
+        "recall": 0.828125,
+        "f1-score": 0.8346456692913385,
+        "support": 64.0
+      },
+      "Business & Industrial/Manufacturing": {
+        "precision": 0.863013698630137,
+        "recall": 0.9130434782608695,
+        "f1-score": 0.8873239436619719,
+        "support": 69.0
+      },
+      "Finance/Investments": {
+        "precision": 0.984375,
+        "recall": 0.9692307692307692,
+        "f1-score": 0.9767441860465116,
+        "support": 65.0
+      },
+      "Finance/Personal Finance": {
+        "precision": 0.8285714285714286,
+        "recall": 0.9354838709677419,
+        "f1-score": 0.8787878787878788,
+        "support": 62.0
+      },
+      "Food & Drink/Groceries": {
+        "precision": 0.9491525423728814,
+        "recall": 0.8484848484848485,
+        "f1-score": 0.896,
+        "support": 66.0
+      },
+      "Food & Drink/Restaurants": {
+        "precision": 0.9038461538461539,
+        "recall": 0.7966101694915254,
+        "f1-score": 0.8468468468468469,
+        "support": 59.0
+      },
+      "Games": {
+        "precision": 0.9206349206349206,
+        "recall": 0.9666666666666667,
+        "f1-score": 0.943089430894309,
+        "support": 60.0
+      },
+      "Health/Medical Services": {
+        "precision": 0.9154929577464789,
+        "recall": 0.8904109589041096,
+        "f1-score": 0.9027777777777778,
+        "support": 73.0
+      },
+      "Health/Mental Health": {
+        "precision": 0.9230769230769231,
+        "recall": 0.8571428571428571,
+        "f1-score": 0.8888888888888888,
+        "support": 70.0
+      },
+      "Hobbies & Leisure/Collectibles": {
+        "precision": 0.8108108108108109,
+        "recall": 0.9230769230769231,
+        "f1-score": 0.8633093525179856,
+        "support": 65.0
+      },
+      "Hobbies & Leisure/Crafts": {
+        "precision": 0.8285714285714286,
+        "recall": 0.9206349206349206,
+        "f1-score": 0.8721804511278195,
+        "support": 63.0
+      },
+      "Home & Garden/Home Improvement": {
+        "precision": 0.9206349206349206,
+        "recall": 0.8055555555555556,
+        "f1-score": 0.8592592592592593,
+        "support": 72.0
+      },
+      "Home & Garden/Landscaping": {
+        "precision": 0.7719298245614035,
+        "recall": 0.8627450980392157,
+        "f1-score": 0.8148148148148148,
+        "support": 51.0
+      },
+      "IT & Technology/Hardware Support": {
+        "precision": 0.9354838709677419,
+        "recall": 0.9830508474576272,
+        "f1-score": 0.9586776859504132,
+        "support": 59.0
+      },
+      "IT & Technology/Network Infrastructure": {
+        "precision": 1.0,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.9915966386554622,
+        "support": 60.0
+      },
+      "IT & Technology/Security Operations": {
+        "precision": 0.9,
+        "recall": 0.9863013698630136,
+        "f1-score": 0.9411764705882353,
+        "support": 73.0
+      },
+      "IT & Technology/Software Development": {
+        "precision": 0.9423076923076923,
+        "recall": 0.9423076923076923,
+        "f1-score": 0.9423076923076923,
+        "support": 52.0
+      },
+      "Jobs & Education/Online Courses": {
+        "precision": 0.8970588235294118,
+        "recall": 0.9242424242424242,
+        "f1-score": 0.9104477611940298,
+        "support": 66.0
+      },
+      "Jobs & Education/Recruitment": {
+        "precision": 0.9649122807017544,
+        "recall": 0.9482758620689655,
+        "f1-score": 0.9565217391304348,
+        "support": 58.0
+      },
+      "Law & Government/Government Services": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9230769230769231,
+        "f1-score": 0.916030534351145,
+        "support": 65.0
+      },
+      "Law & Government/Legal Advice": {
+        "precision": 0.8484848484848485,
+        "recall": 0.9491525423728814,
+        "f1-score": 0.896,
+        "support": 59.0
+      },
+      "News": {
+        "precision": 0.961038961038961,
+        "recall": 0.961038961038961,
+        "f1-score": 0.961038961038961,
+        "support": 77.0
+      },
+      "Online Communities/Forums": {
+        "precision": 1.0,
+        "recall": 0.9855072463768116,
+        "f1-score": 0.9927007299270073,
+        "support": 69.0
+      },
+      "Online Communities/Social Networks": {
+        "precision": 0.775,
+        "recall": 0.96875,
+        "f1-score": 0.8611111111111112,
+        "support": 64.0
+      },
+      "People & Society/Culture & Society": {
+        "precision": 0.8947368421052632,
+        "recall": 0.8947368421052632,
+        "f1-score": 0.8947368421052632,
+        "support": 57.0
+      },
+      "Pets & Animals/Pet Services": {
+        "precision": 0.8169014084507042,
+        "recall": 0.7532467532467533,
+        "f1-score": 0.7837837837837838,
+        "support": 77.0
+      },
+      "Pets & Animals/Veterinary Care": {
+        "precision": 0.9322033898305084,
+        "recall": 0.7746478873239436,
+        "f1-score": 0.8461538461538461,
+        "support": 71.0
+      },
+      "Real Estate": {
+        "precision": 0.7454545454545455,
+        "recall": 0.8913043478260869,
+        "f1-score": 0.8118811881188119,
+        "support": 46.0
+      },
+      "Science/Environmental Science": {
+        "precision": 0.7936507936507936,
+        "recall": 0.78125,
+        "f1-score": 0.7874015748031497,
+        "support": 64.0
+      },
+      "Science/Research": {
+        "precision": 0.9298245614035088,
+        "recall": 0.8548387096774194,
+        "f1-score": 0.8907563025210085,
+        "support": 62.0
+      },
+      "Shopping/E-commerce": {
+        "precision": 0.88,
+        "recall": 0.9705882352941176,
+        "f1-score": 0.9230769230769231,
+        "support": 68.0
+      },
+      "Shopping/Retail Stores": {
+        "precision": 0.9016393442622951,
+        "recall": 0.9649122807017544,
+        "f1-score": 0.9322033898305084,
+        "support": 57.0
+      },
+      "Sports": {
+        "precision": 0.8260869565217391,
+        "recall": 0.8085106382978723,
+        "f1-score": 0.8172043010752689,
+        "support": 47.0
+      },
+      "Travel & Transportation/Air Travel": {
+        "precision": 0.8153846153846154,
+        "recall": 0.8833333333333333,
+        "f1-score": 0.848,
+        "support": 60.0
+      },
+      "Travel & Transportation/Land Travel": {
+        "precision": 0.875,
+        "recall": 0.8484848484848485,
+        "f1-score": 0.8615384615384616,
+        "support": 66.0
+      },
+      "accuracy": 0.8861911987860395,
       "macro avg": {
-        "precision": 0.20603628227210818,
-        "recall": 0.20593428954010623,
-        "f1-score": 0.20535100667536774,
-        "support": 1694.0
+        "precision": 0.8883717554046675,
+        "recall": 0.8861827174931272,
+        "f1-score": 0.8849434082124762,
+        "support": 2636.0
       },
       "weighted avg": {
-        "precision": 0.20620102589387487,
-        "recall": 0.20543093270365997,
-        "f1-score": 0.20518100586913054,
-        "support": 1694.0
+        "precision": 0.8897755248188476,
+        "recall": 0.8861911987860395,
+        "f1-score": 0.885721547129191,
+        "support": 2636.0
       }
     }
   },
   "LinearSVC": {
-    "accuracy": 0.21487603305785125,
-    "precision_macro": 0.21533977184648667,
-    "recall_macro": 0.214799613756211,
-    "f1_macro": 0.2148399284250012,
+    "accuracy": 0.973823975720789,
+    "precision_macro": 0.9744798889592616,
+    "recall_macro": 0.9736915765803121,
+    "f1_macro": 0.9737519834201086,
     "classification_report": {
-      "Billing inquiry": {
-        "precision": 0.2132564841498559,
-        "recall": 0.22629969418960244,
-        "f1-score": 0.2195845697329377,
-        "support": 327.0
+      "Arts & Entertainment/Movies": {
+        "precision": 0.9803921568627451,
+        "recall": 0.9615384615384616,
+        "f1-score": 0.970873786407767,
+        "support": 52.0
       },
-      "Cancellation request": {
-        "precision": 0.2011173184357542,
-        "recall": 0.21238938053097345,
-        "f1-score": 0.2065997130559541,
-        "support": 339.0
+      "Arts & Entertainment/Music": {
+        "precision": 0.9666666666666667,
+        "recall": 0.9666666666666667,
+        "f1-score": 0.9666666666666667,
+        "support": 60.0
       },
-      "Product inquiry": {
-        "precision": 0.21103896103896103,
-        "recall": 0.19817073170731708,
-        "f1-score": 0.20440251572327045,
-        "support": 328.0
+      "Autos & Vehicles/Maintenance": {
+        "precision": 1.0,
+        "recall": 0.8813559322033898,
+        "f1-score": 0.9369369369369369,
+        "support": 59.0
       },
-      "Refund request": {
-        "precision": 0.21153846153846154,
-        "recall": 0.21937321937321938,
-        "f1-score": 0.2153846153846154,
-        "support": 351.0
+      "Autos & Vehicles/Sales": {
+        "precision": 0.9466666666666667,
+        "recall": 0.9726027397260274,
+        "f1-score": 0.9594594594594594,
+        "support": 73.0
       },
-      "Technical issue": {
-        "precision": 0.23974763406940064,
-        "recall": 0.2177650429799427,
-        "f1-score": 0.22822822822822822,
-        "support": 349.0
+      "Beauty & Fitness/Cosmetics": {
+        "precision": 0.9836065573770492,
+        "recall": 1.0,
+        "f1-score": 0.9917355371900827,
+        "support": 60.0
       },
-      "accuracy": 0.21487603305785125,
+      "Beauty & Fitness/Fitness Training": {
+        "precision": 0.9827586206896551,
+        "recall": 0.9827586206896551,
+        "f1-score": 0.9827586206896551,
+        "support": 58.0
+      },
+      "Books & Literature/Fiction": {
+        "precision": 0.9824561403508771,
+        "recall": 0.9655172413793104,
+        "f1-score": 0.9739130434782609,
+        "support": 58.0
+      },
+      "Books & Literature/Non-Fiction": {
+        "precision": 0.9682539682539683,
+        "recall": 0.953125,
+        "f1-score": 0.9606299212598425,
+        "support": 64.0
+      },
+      "Business & Industrial/Manufacturing": {
+        "precision": 0.971830985915493,
+        "recall": 1.0,
+        "f1-score": 0.9857142857142858,
+        "support": 69.0
+      },
+      "Finance/Investments": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 65.0
+      },
+      "Finance/Personal Finance": {
+        "precision": 0.9836065573770492,
+        "recall": 0.967741935483871,
+        "f1-score": 0.975609756097561,
+        "support": 62.0
+      },
+      "Food & Drink/Groceries": {
+        "precision": 0.9841269841269841,
+        "recall": 0.9393939393939394,
+        "f1-score": 0.9612403100775194,
+        "support": 66.0
+      },
+      "Food & Drink/Restaurants": {
+        "precision": 0.9827586206896551,
+        "recall": 0.9661016949152542,
+        "f1-score": 0.9743589743589743,
+        "support": 59.0
+      },
+      "Games": {
+        "precision": 0.9836065573770492,
+        "recall": 1.0,
+        "f1-score": 0.9917355371900827,
+        "support": 60.0
+      },
+      "Health/Medical Services": {
+        "precision": 0.9857142857142858,
+        "recall": 0.9452054794520548,
+        "f1-score": 0.965034965034965,
+        "support": 73.0
+      },
+      "Health/Mental Health": {
+        "precision": 0.9855072463768116,
+        "recall": 0.9714285714285714,
+        "f1-score": 0.9784172661870504,
+        "support": 70.0
+      },
+      "Hobbies & Leisure/Collectibles": {
+        "precision": 1.0,
+        "recall": 0.9692307692307692,
+        "f1-score": 0.984375,
+        "support": 65.0
+      },
+      "Hobbies & Leisure/Crafts": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 63.0
+      },
+      "Home & Garden/Home Improvement": {
+        "precision": 0.971830985915493,
+        "recall": 0.9583333333333334,
+        "f1-score": 0.965034965034965,
+        "support": 72.0
+      },
+      "Home & Garden/Landscaping": {
+        "precision": 1.0,
+        "recall": 0.9607843137254902,
+        "f1-score": 0.98,
+        "support": 51.0
+      },
+      "IT & Technology/Hardware Support": {
+        "precision": 0.9672131147540983,
+        "recall": 1.0,
+        "f1-score": 0.9833333333333333,
+        "support": 59.0
+      },
+      "IT & Technology/Network Infrastructure": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 60.0
+      },
+      "IT & Technology/Security Operations": {
+        "precision": 0.9733333333333334,
+        "recall": 1.0,
+        "f1-score": 0.9864864864864865,
+        "support": 73.0
+      },
+      "IT & Technology/Software Development": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 52.0
+      },
+      "Jobs & Education/Online Courses": {
+        "precision": 0.9428571428571428,
+        "recall": 1.0,
+        "f1-score": 0.9705882352941176,
+        "support": 66.0
+      },
+      "Jobs & Education/Recruitment": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 58.0
+      },
+      "Law & Government/Government Services": {
+        "precision": 0.9558823529411765,
+        "recall": 1.0,
+        "f1-score": 0.9774436090225563,
+        "support": 65.0
+      },
+      "Law & Government/Legal Advice": {
+        "precision": 1.0,
+        "recall": 0.9830508474576272,
+        "f1-score": 0.9914529914529915,
+        "support": 59.0
+      },
+      "News": {
+        "precision": 0.9746835443037974,
+        "recall": 1.0,
+        "f1-score": 0.9871794871794872,
+        "support": 77.0
+      },
+      "Online Communities/Forums": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 69.0
+      },
+      "Online Communities/Social Networks": {
+        "precision": 0.927536231884058,
+        "recall": 1.0,
+        "f1-score": 0.9624060150375939,
+        "support": 64.0
+      },
+      "People & Society/Culture & Society": {
+        "precision": 1.0,
+        "recall": 0.9649122807017544,
+        "f1-score": 0.9821428571428571,
+        "support": 57.0
+      },
+      "Pets & Animals/Pet Services": {
+        "precision": 0.9605263157894737,
+        "recall": 0.948051948051948,
+        "f1-score": 0.954248366013072,
+        "support": 77.0
+      },
+      "Pets & Animals/Veterinary Care": {
+        "precision": 0.9855072463768116,
+        "recall": 0.9577464788732394,
+        "f1-score": 0.9714285714285714,
+        "support": 71.0
+      },
+      "Real Estate": {
+        "precision": 0.9183673469387755,
+        "recall": 0.9782608695652174,
+        "f1-score": 0.9473684210526315,
+        "support": 46.0
+      },
+      "Science/Environmental Science": {
+        "precision": 0.9242424242424242,
+        "recall": 0.953125,
+        "f1-score": 0.9384615384615385,
+        "support": 64.0
+      },
+      "Science/Research": {
+        "precision": 1.0,
+        "recall": 0.9354838709677419,
+        "f1-score": 0.9666666666666667,
+        "support": 62.0
+      },
+      "Shopping/E-commerce": {
+        "precision": 0.9444444444444444,
+        "recall": 1.0,
+        "f1-score": 0.9714285714285714,
+        "support": 68.0
+      },
+      "Shopping/Retail Stores": {
+        "precision": 0.9333333333333333,
+        "recall": 0.9824561403508771,
+        "f1-score": 0.9572649572649573,
+        "support": 57.0
+      },
+      "Sports": {
+        "precision": 0.9574468085106383,
+        "recall": 0.9574468085106383,
+        "f1-score": 0.9574468085106383,
+        "support": 47.0
+      },
+      "Travel & Transportation/Air Travel": {
+        "precision": 0.9491525423728814,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.9411764705882353,
+        "support": 60.0
+      },
+      "Travel & Transportation/Land Travel": {
+        "precision": 0.9538461538461539,
+        "recall": 0.9393939393939394,
+        "f1-score": 0.9465648854961832,
+        "support": 66.0
+      },
+      "accuracy": 0.973823975720789,
       "macro avg": {
-        "precision": 0.21533977184648667,
-        "recall": 0.214799613756211,
-        "f1-score": 0.2148399284250012,
-        "support": 1694.0
+        "precision": 0.9744798889592616,
+        "recall": 0.9736915765803121,
+        "f1-score": 0.9737519834201086,
+        "support": 2636.0
       },
       "weighted avg": {
-        "precision": 0.21549961320999034,
-        "recall": 0.21487603305785125,
-        "f1-score": 0.2149569857364365,
-        "support": 1694.0
+        "precision": 0.9743953259213429,
+        "recall": 0.973823975720789,
+        "f1-score": 0.9737824650634166,
+        "support": 2636.0
       }
     }
   },
   "Multinomial Naive Bayes": {
-    "accuracy": 0.19952774498229045,
-    "precision_macro": 0.19732785225938096,
-    "recall_macro": 0.1976989237570076,
-    "f1_macro": 0.1936099786594137,
+    "accuracy": 0.7556904400606981,
+    "precision_macro": 0.8660336151945147,
+    "recall_macro": 0.7374403962903899,
+    "f1_macro": 0.7569782342491455,
     "classification_report": {
-      "Billing inquiry": {
-        "precision": 0.18840579710144928,
-        "recall": 0.11926605504587157,
-        "f1-score": 0.14606741573033707,
-        "support": 327.0
+      "Arts & Entertainment/Movies": {
+        "precision": 1.0,
+        "recall": 0.4807692307692308,
+        "f1-score": 0.6493506493506493,
+        "support": 52.0
       },
-      "Cancellation request": {
-        "precision": 0.20064724919093851,
-        "recall": 0.18289085545722714,
-        "f1-score": 0.19135802469135801,
-        "support": 339.0
+      "Arts & Entertainment/Music": {
+        "precision": 0.9512195121951219,
+        "recall": 0.65,
+        "f1-score": 0.7722772277227723,
+        "support": 60.0
       },
-      "Product inquiry": {
-        "precision": 0.1867704280155642,
-        "recall": 0.14634146341463414,
-        "f1-score": 0.1641025641025641,
-        "support": 328.0
+      "Autos & Vehicles/Maintenance": {
+        "precision": 1.0,
+        "recall": 0.5254237288135594,
+        "f1-score": 0.6888888888888889,
+        "support": 59.0
       },
-      "Refund request": {
-        "precision": 0.19957983193277312,
-        "recall": 0.2706552706552707,
-        "f1-score": 0.22974607013301088,
-        "support": 351.0
+      "Autos & Vehicles/Sales": {
+        "precision": 0.76,
+        "recall": 0.7808219178082192,
+        "f1-score": 0.7702702702702703,
+        "support": 73.0
       },
-      "Technical issue": {
-        "precision": 0.21123595505617979,
-        "recall": 0.2693409742120344,
-        "f1-score": 0.2367758186397985,
-        "support": 349.0
+      "Beauty & Fitness/Cosmetics": {
+        "precision": 0.9473684210526315,
+        "recall": 0.6,
+        "f1-score": 0.7346938775510204,
+        "support": 60.0
       },
-      "accuracy": 0.19952774498229045,
+      "Beauty & Fitness/Fitness Training": {
+        "precision": 1.0,
+        "recall": 0.6206896551724138,
+        "f1-score": 0.7659574468085106,
+        "support": 58.0
+      },
+      "Books & Literature/Fiction": {
+        "precision": 0.9743589743589743,
+        "recall": 0.6551724137931034,
+        "f1-score": 0.7835051546391752,
+        "support": 58.0
+      },
+      "Books & Literature/Non-Fiction": {
+        "precision": 0.7066666666666667,
+        "recall": 0.828125,
+        "f1-score": 0.762589928057554,
+        "support": 64.0
+      },
+      "Business & Industrial/Manufacturing": {
+        "precision": 0.7073170731707317,
+        "recall": 0.8405797101449275,
+        "f1-score": 0.7682119205298014,
+        "support": 69.0
+      },
+      "Finance/Investments": {
+        "precision": 0.9833333333333333,
+        "recall": 0.9076923076923077,
+        "f1-score": 0.944,
+        "support": 65.0
+      },
+      "Finance/Personal Finance": {
+        "precision": 0.7307692307692307,
+        "recall": 0.9193548387096774,
+        "f1-score": 0.8142857142857143,
+        "support": 62.0
+      },
+      "Food & Drink/Groceries": {
+        "precision": 0.875,
+        "recall": 0.7424242424242424,
+        "f1-score": 0.8032786885245902,
+        "support": 66.0
+      },
+      "Food & Drink/Restaurants": {
+        "precision": 1.0,
+        "recall": 0.4745762711864407,
+        "f1-score": 0.6436781609195402,
+        "support": 59.0
+      },
+      "Games": {
+        "precision": 0.975,
+        "recall": 0.65,
+        "f1-score": 0.78,
+        "support": 60.0
+      },
+      "Health/Medical Services": {
+        "precision": 0.6448598130841121,
+        "recall": 0.9452054794520548,
+        "f1-score": 0.7666666666666667,
+        "support": 73.0
+      },
+      "Health/Mental Health": {
+        "precision": 0.8285714285714286,
+        "recall": 0.8285714285714286,
+        "f1-score": 0.8285714285714286,
+        "support": 70.0
+      },
+      "Hobbies & Leisure/Collectibles": {
+        "precision": 0.7051282051282052,
+        "recall": 0.8461538461538461,
+        "f1-score": 0.7692307692307693,
+        "support": 65.0
+      },
+      "Hobbies & Leisure/Crafts": {
+        "precision": 0.7162162162162162,
+        "recall": 0.8412698412698413,
+        "f1-score": 0.7737226277372263,
+        "support": 63.0
+      },
+      "Home & Garden/Home Improvement": {
+        "precision": 0.7045454545454546,
+        "recall": 0.8611111111111112,
+        "f1-score": 0.775,
+        "support": 72.0
+      },
+      "Home & Garden/Landscaping": {
+        "precision": 1.0,
+        "recall": 0.37254901960784315,
+        "f1-score": 0.5428571428571428,
+        "support": 51.0
+      },
+      "IT & Technology/Hardware Support": {
+        "precision": 1.0,
+        "recall": 0.8305084745762712,
+        "f1-score": 0.9074074074074074,
+        "support": 59.0
+      },
+      "IT & Technology/Network Infrastructure": {
+        "precision": 0.9830508474576272,
+        "recall": 0.9666666666666667,
+        "f1-score": 0.9747899159663865,
+        "support": 60.0
+      },
+      "IT & Technology/Security Operations": {
+        "precision": 0.8068181818181818,
+        "recall": 0.9726027397260274,
+        "f1-score": 0.8819875776397516,
+        "support": 73.0
+      },
+      "IT & Technology/Software Development": {
+        "precision": 1.0,
+        "recall": 0.7692307692307693,
+        "f1-score": 0.8695652173913043,
+        "support": 52.0
+      },
+      "Jobs & Education/Online Courses": {
+        "precision": 0.875,
+        "recall": 0.8484848484848485,
+        "f1-score": 0.8615384615384616,
+        "support": 66.0
+      },
+      "Jobs & Education/Recruitment": {
+        "precision": 1.0,
+        "recall": 0.7758620689655172,
+        "f1-score": 0.8737864077669902,
+        "support": 58.0
+      },
+      "Law & Government/Government Services": {
+        "precision": 0.9076923076923077,
+        "recall": 0.9076923076923077,
+        "f1-score": 0.9076923076923077,
+        "support": 65.0
+      },
+      "Law & Government/Legal Advice": {
+        "precision": 0.9534883720930233,
+        "recall": 0.6949152542372882,
+        "f1-score": 0.803921568627451,
+        "support": 59.0
+      },
+      "News": {
+        "precision": 0.27598566308243727,
+        "recall": 1.0,
+        "f1-score": 0.43258426966292135,
+        "support": 77.0
+      },
+      "Online Communities/Forums": {
+        "precision": 0.9452054794520548,
+        "recall": 1.0,
+        "f1-score": 0.971830985915493,
+        "support": 69.0
+      },
+      "Online Communities/Social Networks": {
+        "precision": 0.9285714285714286,
+        "recall": 0.8125,
+        "f1-score": 0.8666666666666667,
+        "support": 64.0
+      },
+      "People & Society/Culture & Society": {
+        "precision": 1.0,
+        "recall": 0.5087719298245614,
+        "f1-score": 0.6744186046511628,
+        "support": 57.0
+      },
+      "Pets & Animals/Pet Services": {
+        "precision": 0.3802083333333333,
+        "recall": 0.948051948051948,
+        "f1-score": 0.5427509293680297,
+        "support": 77.0
+      },
+      "Pets & Animals/Veterinary Care": {
+        "precision": 0.7307692307692307,
+        "recall": 0.8028169014084507,
+        "f1-score": 0.7651006711409396,
+        "support": 71.0
+      },
+      "Real Estate": {
+        "precision": 1.0,
+        "recall": 0.06521739130434782,
+        "f1-score": 0.12244897959183673,
+        "support": 46.0
+      },
+      "Science/Environmental Science": {
+        "precision": 0.8269230769230769,
+        "recall": 0.671875,
+        "f1-score": 0.7413793103448276,
+        "support": 64.0
+      },
+      "Science/Research": {
+        "precision": 1.0,
+        "recall": 0.6451612903225806,
+        "f1-score": 0.7843137254901961,
+        "support": 62.0
+      },
+      "Shopping/E-commerce": {
+        "precision": 0.75,
+        "recall": 0.9705882352941176,
+        "f1-score": 0.8461538461538461,
+        "support": 68.0
+      },
+      "Shopping/Retail Stores": {
+        "precision": 0.9056603773584906,
+        "recall": 0.8421052631578947,
+        "f1-score": 0.8727272727272727,
+        "support": 57.0
+      },
+      "Sports": {
+        "precision": 1.0,
+        "recall": 0.2553191489361702,
+        "f1-score": 0.4067796610169492,
+        "support": 47.0
+      },
+      "Travel & Transportation/Air Travel": {
+        "precision": 0.9736842105263158,
+        "recall": 0.6166666666666667,
+        "f1-score": 0.7551020408163265,
+        "support": 60.0
+      },
+      "Travel & Transportation/Land Travel": {
+        "precision": 0.92,
+        "recall": 0.696969696969697,
+        "f1-score": 0.7931034482758621,
+        "support": 66.0
+      },
+      "accuracy": 0.7556904400606981,
       "macro avg": {
-        "precision": 0.19732785225938096,
-        "recall": 0.1976989237570076,
-        "f1-score": 0.1936099786594137,
-        "support": 1694.0
+        "precision": 0.8660336151945147,
+        "recall": 0.7374403962903899,
+        "f1-score": 0.7569782342491455,
+        "support": 2636.0
       },
       "weighted avg": {
-        "precision": 0.19755766401417785,
-        "recall": 0.19952774498229045,
-        "f1-score": 0.19464916627025272,
-        "support": 1694.0
+        "precision": 0.8515947116813413,
+        "recall": 0.7556904400606981,
+        "f1-score": 0.7626422841921462,
+        "support": 2636.0
       }
     }
   }

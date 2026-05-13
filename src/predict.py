@@ -26,9 +26,17 @@ ESCALATION_KEYWORDS = [
     "fraud",
     "double charged",
     "charged twice",
+    "dringend",
+    "kritisch",
+    "sicherheitsvorfall",
+    "datenverletzung",
+    "zahlung fehlgeschlagen",
+    "serverausfall",
+    "nicht zugreifen",
+    "konto gesperrt",
 ]
 
-PRIORITY_ORDER = ["Low", "Medium", "High", "Critical"]
+PRIORITY_ORDER = ["very_low", "low", "medium", "high", "critical"]
 
 
 def detect_escalation_keywords(ticket_text: str) -> list[str]:
@@ -42,11 +50,12 @@ def boost_priority(predicted_priority: str, detected_keywords: list[str]) -> str
     if not detected_keywords:
         return predicted_priority
 
-    if predicted_priority not in PRIORITY_ORDER:
-        return "High"
+    normalized_priority = str(predicted_priority).lower()
+    if normalized_priority not in PRIORITY_ORDER:
+        return "high"
 
-    current_index = PRIORITY_ORDER.index(predicted_priority)
-    boosted_index = max(current_index, PRIORITY_ORDER.index("High"))
+    current_index = PRIORITY_ORDER.index(normalized_priority)
+    boosted_index = max(current_index, PRIORITY_ORDER.index("high"))
     return PRIORITY_ORDER[boosted_index]
 
 
@@ -106,5 +115,8 @@ def predict_ticket(ticket_text: str) -> dict:
 
 
 if __name__ == "__main__":
-    sample = "Payment deducted twice and refund not received"
+    sample = (
+        "Bestellungen von signierten Ausgaben: App stuerzt ab. "
+        "Ich habe ein kritisches Problem mit der mobilen App und benoetige sofortige Hilfe."
+    )
     print(predict_ticket(sample))

@@ -30,7 +30,7 @@ from utils import (
 
 
 RANDOM_STATE = 42
-MAX_FEATURES = 12000
+MAX_FEATURES = 120000
 MIN_DF = 2
 TEST_SIZE = 0.2
 
@@ -43,9 +43,10 @@ def build_vectorizer() -> TfidfVectorizer:
     """Create the shared TF-IDF vectorizer used by both models."""
     return TfidfVectorizer(
         max_features=MAX_FEATURES,
-        ngram_range=(1, 2),
+        ngram_range=(1, 3),
         min_df=MIN_DF,
         sublinear_tf=True,
+        strip_accents="unicode",
     )
 
 
@@ -172,7 +173,17 @@ def train_pipeline_model(target: str) -> Pipeline:
     model = LinearSVC(class_weight="balanced", random_state=RANDOM_STATE)
     pipeline = Pipeline(
         steps=[
-            ("clean_tfidf", TfidfVectorizer(preprocessor=clean_text, max_features=MAX_FEATURES, ngram_range=(1, 2), min_df=MIN_DF)),
+            (
+                "clean_tfidf",
+                TfidfVectorizer(
+                    preprocessor=clean_text,
+                    max_features=MAX_FEATURES,
+                    ngram_range=(1, 3),
+                    min_df=MIN_DF,
+                    sublinear_tf=True,
+                    strip_accents="unicode",
+                ),
+            ),
             ("model", model),
         ]
     )
